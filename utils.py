@@ -23,12 +23,12 @@ def find_files(username):
             if username in contacts:
                 #print(contacts[username]["email"])
                 files= contacts[username]["files"]
-                print("serie de files: ", files)
+                print("files to sent: ", files)
                 text = ""
                 with open("files.json", "r") as fjson:
                     files_doc = json.load(fjson)
                     for file in files:
-                        print("file: ")
+                        #print("file: ")
                         text += "\n"+files_doc[file]["description"] + " en la url: " + files_doc[file]["url"]
                     return text
             else:
