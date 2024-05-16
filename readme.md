@@ -12,6 +12,8 @@ This bot will verify the users, and give them access to certain files
 
 4) Configure `contact.json` file, this contains the telegram usernames and their emails asociates, you must put the usernames and emails in the same format.
 
+5) Configure `files.json` file, here you should have the name of the course and url files that you want to share
+
 
 ## Configure @BotFather in telegram
 
@@ -37,4 +39,7 @@ Replace `<token>` with your actual token.
 3) Type a name to label this password, exmaple: `telegram-bot`. It will retrieve a password for apps, that you will keep safe and put it on the `.env` file, without the dashes (-)
 
 
+# Run Server
+
+Run just using `start.bat` file
 
