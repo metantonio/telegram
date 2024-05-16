@@ -1,0 +1,10 @@
+{
+    "math":{
+        "description":"Files for Math chapter 1",
+        "url":"www.ejemplo1.com"
+    },
+    "geometry":{
+        "description":"Files for Geometry chapter 1",
+        "url":"www.ejemplo2.com"
+    }
+}
