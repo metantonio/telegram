@@ -89,6 +89,8 @@ def send_email(user, verification_code):
     with smtplib.SMTP_SSL(EMAIL_HOST, EMAIL_PORT) as server:
         server.login(EMAIL_USERNAME, EMAIL_PASSWORD)
         server.send_message(msg)
+    
+    return True
 
 @bot.message_handler(func=lambda message: True)
 def verify_code(message):
@@ -102,7 +104,7 @@ def verify_code(message):
         stored_code, timestamp = verification_codes[user_id]
         if time.time() - timestamp <= 300:  # Verifica si el código es válido dentro de los 5 minutos
             if input_code == stored_code:
-                urls = find_files(user)
+                urls = find_files(username)
                 bot.reply_to(message, f'¡Código de verificación correcto! Aquí está tu archivo(s). {urls}')
                 # Proporcionar el archivo para descargar
                 """ with open('path_to_your_file', 'rb') as file:
