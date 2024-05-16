@@ -7,6 +7,7 @@ import string
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import telebot
+from telebot import types
 from dotenv import load_dotenv
 
 from utils import find_user, find_files
@@ -40,10 +41,26 @@ def send_welcome(message):
     username = user.username
     text = "What do you want to do?\nChoose one: */download*"
     bot.reply_to(message, f"Howdy, how are you doing {first_name}?")
-    sent_msg = bot.send_message(message.chat.id, text, parse_mode="Markdown")
+    #sent_msg = bot.send_message(message.chat.id, text, parse_mode="Markdown")
     #print("sent_msg: ", sent_msg)
     # bot.register_next_step_handler(sent_msg, handle_download_request(message))
 
+    markup = types.ReplyKeyboardMarkup(row_width=1)
+    download_btn = types.KeyboardButton('/download')
+    close_btn = types.KeyboardButton('/close')
+    markup.add(download_btn)
+    markup.add(close_btn)
+
+    bot.send_message(message.chat.id, text, reply_markup=markup)
+
+@bot.message_handler(commands=["close"])
+def send_welcome(message):
+    user = message.from_user
+    first_name = user.first_name
+    last_name = user.last_name
+    username = user.username
+    
+    bot.reply_to(message, f"See you next time {first_name}")
 
 """ @bot.message_handler(func=lambda msg: True)
 def echo_all(message):
