@@ -1,10 +1,12 @@
 {
     "metantonio1":{
         "name":"Antonio",
-        "email":"antonio.martinez@qlx.com"
+        "email":"antonio.martinez@qlx.com",
+        "files":["math", "geometry"]
     },
     "example":{
         "name":"Example",
-        "email":"example@example.com"
+        "email":"example@example.com",
+        "files":["math"]
     }
 }
