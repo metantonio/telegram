@@ -80,7 +80,7 @@ def send_email(user, verification_code):
         return None
     msg = MIMEMultipart()
     msg['From'] = EMAIL_USERNAME
-    msg['To'] = email  # Reemplaza esto con la lógica para obtener el email del usuario
+    msg['To'] = email 
     msg['Subject'] = 'Código de Verificación'
 
     body = f'Su código de verificación es: {verification_code}'
