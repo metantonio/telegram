@@ -41,7 +41,7 @@ def send_welcome(message):
     text = "What do you want to do?\nChoose one: */download*"
     bot.reply_to(message, f"Howdy, how are you doing {first_name}?")
     sent_msg = bot.send_message(message.chat.id, text, parse_mode="Markdown")
-    print("sent_msg: ", sent_msg)
+    #print("sent_msg: ", sent_msg)
     # bot.register_next_step_handler(sent_msg, handle_download_request(message))
 
 
