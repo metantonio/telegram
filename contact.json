@@ -1,0 +1,10 @@
+{
+    "metantonio1":{
+        "name":"Antonio",
+        "email":"antonio.martinez@qlx.com"
+    },
+    "example":{
+        "name":"Example",
+        "email":"example@example.com"
+    }
+}
