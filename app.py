@@ -33,7 +33,7 @@ print("initializing bot")
 bot = telebot.TeleBot(BOT_TOKEN)
 
 
-@bot.message_handler(commands=["start", "hello"])
+@bot.message_handler(commands=["start", "hello", "bot"])
 def send_welcome(message):
     user = message.from_user
     first_name = user.first_name
