@@ -23,7 +23,7 @@ This bot will verify the users, and give them access to certain files
 
 3) Type `/newbot` and follow the prompts to set up a new bot. The BotFather will give you a token that you will use to authenticate your bot and grant it access to the Telegram API.
 
-4) If your forget your token, you can type `/token` to obtain it again. Remeber to put it in the `.env` file (not in .env.example)
+4) If your forgot your token, you can type `/token` to obtain it again. Remeber to put it in the `.env` file (not in .env.example)
 
 5) Add the bot to your group, with admin access. Navigate to https://api.telegram.org/bot-token-/getUpdates   
 Replace `-token-` with your actual token.
