@@ -34,7 +34,7 @@ Replace `-token-` with your actual token.
 
 1) Go to Gmail, and then to Managament Your Account
 
-2) On the search bar type: `App passwords`. Probably will ass you for your actual password to enter.
+2) On the search bar type: `App passwords`. Probably will ask you for your actual password to enter.
 
 3) Type a name to label this password, exmaple: `telegram-bot`. It will retrieve a password for apps, that you will keep safe and put it on the `.env` file, without the dashes (-)
 
