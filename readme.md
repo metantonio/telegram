@@ -25,8 +25,8 @@ This bot will verify the users, and give them access to certain files
 
 4) If your forget your token, you can type `/token` to obtain it again. Remeber to put it in the `.env` file (not in .env.example)
 
-5) Add the bot to your group, with admin access. Navigate to https://api.telegram.org/bot`<token>`/getUpdates   
-Replace `<token>` with your actual token.
+5) Add the bot to your group, with admin access. Navigate to https://api.telegram.org/bot-token-/getUpdates   
+Replace `-token-` with your actual token.
 
 6) If everything is ok, you should check: 
 
