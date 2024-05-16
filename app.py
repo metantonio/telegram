@@ -9,7 +9,7 @@ from email.mime.multipart import MIMEMultipart
 import telebot
 from dotenv import load_dotenv
 
-from utils import find_user
+from utils import find_user, find_files
 
 # Carga las variables de entorno desde el archivo .env
 load_dotenv()
@@ -96,14 +96,17 @@ def verify_code(message):
     user_id = user.id
     input_code = message.text.strip()
 
+    username = user.username
+
     if user_id in verification_codes:
         stored_code, timestamp = verification_codes[user_id]
         if time.time() - timestamp <= 300:  # Verifica si el código es válido dentro de los 5 minutos
             if input_code == stored_code:
-                bot.reply_to(message, '¡Código de verificación correcto! Aquí está tu archivo.')
+                urls = find_files(user)
+                bot.reply_to(message, f'¡Código de verificación correcto! Aquí está tu archivo(s). {urls}')
                 # Proporcionar el archivo para descargar
-                with open('path_to_your_file', 'rb') as file:
-                    bot.send_document(user_id, file)
+                """ with open('path_to_your_file', 'rb') as file:
+                    bot.send_document(user_id, file) """
                 del verification_codes[user_id]  # Elimina el código verificado
             else:
                 bot.reply_to(message, '¡Código de verificación incorrecto! Por favor, inténtalo de nuevo.')
