@@ -12,6 +12,7 @@ This bot will verify the users, and give them access to certain files
 
 4) Configure `contact.json` file, this contains the telegram usernames and their emails asociates, you must put the usernames and emails in the same format.
 
+
 ## Configure @BotFather in telegram
 
 1) Search for @Botfather in Telegram
@@ -22,7 +23,10 @@ This bot will verify the users, and give them access to certain files
 
 4) If your forget your token, you can type `/token` to obtain it again. Remeber to put it in the `.env` file (not in .env.example)
 
-5) Add the bot to your group, with admin access
+5) Add the bot to your group, with admin access. Navigate to https://api.telegram.org/bot<token>/getUpdates   
+Replace `<token>` with your actual token.
+
+6) If everything is ok, you should check: 
 
 ## Configure Gmail Password for apps
 
@@ -34,4 +38,3 @@ This bot will verify the users, and give them access to certain files
 
 
 
-https://api.telegram.org/bot<token>/getUpdates
